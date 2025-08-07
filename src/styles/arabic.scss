@@ -1,0 +1,172 @@
+html[dir="rtl"] {
+  @media (max-width: 575px) {
+    .top_section_title {
+      line-height: 40px;
+    }
+
+    .top_section_sub_title {
+      line-height: 30px;
+    }
+
+    .about_us .our_values .inner_section>h3 {
+      line-height: 25px;
+    }
+
+    .contact_us .address_row h2 {
+      line-height: 35px;
+    }
+
+    .about_us .top_section .top_section_title {
+      line-height: 34px;
+      font-size: 25px;
+    }
+
+    .home h3.sub_title {
+      line-height: 26px;
+      font-size: 18px;
+    }
+
+  }
+
+  .project_slider_controls .slider_btn {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .service_btn,
+  .portfolio_inner_section .portfolio_inner .case_study_btn {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  header .menu_links ul {
+    height: 64px;
+  }
+
+  .top_section_title span {
+    line-height: 1.2;
+  }
+
+  .home .our_services .services_row .single_service p {
+    line-height: 24px;
+  }
+
+  .sub_title {
+    line-height: 40px;
+
+    @media (max-width: 575px) {
+      line-height: 35px;
+    }
+  }
+
+  .home .engagement_models .models_cards .single_card h2 {
+    line-height: 40px;
+
+    @media (max-width: 575px) {
+      line-height: 35px;
+    }
+  }
+
+  .home .engagement_models .models_cards .single_card p {
+    line-height: 24px;
+  }
+
+  .home .engagement_models .models_cards .single_card .points .single_point h3 {
+    line-height: 24px;
+  }
+
+  .consult_our_experts .inner_row .left_section .content h2 {
+    line-height: 42px;
+  }
+
+  .about_us .inner_desc p {
+    line-height: 30px;
+  }
+
+  .about_us .rise_section>p {
+    line-height: 30px;
+  }
+
+  .about_us .rise_section .rise_row .single_rise h3 {
+    line-height: 24px;
+    max-width: 100%;
+    text-align: right;
+  }
+
+  .about_us .rise_section .rise_row .single_rise p {
+    line-height: 22px;
+    text-align: right;
+  }
+
+  .about_us .rise_section .rise_row .single_rise img {
+    display: block;
+    margin-left: auto;
+  }
+
+  .about_us .our_values .inner_section .core_values .single_value .content p {
+    line-height: 22px;
+  }
+
+  .about_us .our_values .inner_section .core_values .single_value .content h2 {
+    line-height: 26px;
+  }
+
+  .our_services .service_categories .single_tech_card h2 {
+    line-height: 30px;
+  }
+
+  .our_services .service_categories .single_tech_card p {
+    line-height: 26px;
+  }
+
+  .our_services .overview_section .content h2 {
+    line-height: 36px;
+  }
+
+  .our_services .overview_section .content p {
+    line-height: 24px;
+  }
+
+  .contact_us .our_values .inner_section .headline {
+    line-height: 54px;
+  }
+
+  .consult_our_experts .inner_row .para {
+    line-height: 26px;
+  }
+
+  .portfolio_details .about_us_section .right_section .tags .single_tag h2 {
+    line-height: 30px;
+  }
+
+  .main_btn {
+    padding: 13px 40px;
+  }
+
+  .about_us .our_vision_mission .committed_row .inner_section p .quotes_end,
+  .about_us .our_vision_mission .committed_row .inner_section p .quotes_start {
+    transform: rotate(180deg);
+  }
+
+  .portfolio_inner_section .portfolio_inner .case_study_btn {
+    width: fit-content;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+  .common_form .form_field input,
+  .common_form .form_field textarea,
+  .common_form .form_field select {
+    direction: rtl;
+  }
+
+  .home .engagement_models .mobile_models_cards .single_card h2 {
+    font-size: 19px;
+  }
+
+  .portfolio_inner_section [id="6-8-sports"] .left .content h3 {
+    direction: ltr;
+    text-align: right;
+  }
+
+}

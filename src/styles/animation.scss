@@ -1,0 +1,83 @@
+.animated-typing {
+  // display: inline-block;
+  font-weight: bold;
+  // white-space: nowrap;
+  // overflow: hidden;
+  vertical-align: top;
+  font-weight: 400;
+
+  @media (max-width: 575px) {
+    font-size: 32px;
+    // display: block;
+  }
+  @media (max-width: 375px) {
+    font-size: 30px;
+    white-space: pre-wrap;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--primary-color, #0c3553);
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-9rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-9rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
