@@ -54,13 +54,13 @@ const TopSection = () => {
             {t("Empowering Energy & Tech")}
             {/* <br />   */}{" "}
             {/* <span className="animated-typing">{displayText}</span> */}
-            <span className="animated-typing">{t('with AI & EngineeringExcellence')}</span>
+            <span className="animated-typing">{t('with AI & Engineering Excellence')}</span>
             {/* <span className="cursor">|</span> */}
           </h1>
           <h1 className="top_section_title  d-lg-none">
             {t("Empowering Businesses to Scale")}
             <br />
-            <span className="animated-typing">{t('with AI & EngineeringExcellence')}</span>
+            <span className="animated-typing">{t('with AI & Engineering Excellence')}</span>
             {/* <span className="animated-typing">{displayText}</span>
             <span className="cursor">|</span> */}
           </h1>

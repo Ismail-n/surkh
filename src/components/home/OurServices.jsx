@@ -57,7 +57,7 @@ const OurServices = () => {
                 <div className="gradient_effect"></div>
                 <div className="content">
                   <h2>{t("Let's Build Something Amazing")}</h2>
-                  <Link href="/our-services">
+                  <Link href="/our-solutions">
                     <button type="button" className="service_btn">
                       {t("Explore Services")} <ArrowRight />
                     </button>
@@ -88,7 +88,7 @@ const OurServices = () => {
                           <div className="gradient_effect"></div>
                           <div className="content">
                             <h2>{t("Let's Build Something Amazing")}</h2>
-                            <Link href="/our-services">
+                            <Link href="/our-solutions">
                               <button type="button" className="service_btn">
                                 {t("Explore Services")} <ArrowRight />
                               </button>

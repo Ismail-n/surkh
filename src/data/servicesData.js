@@ -1,12 +1,12 @@
 const servicesData = [
   {
     id: "mobile-app",
-    mainTitle: "Enterprise Mobility That Accelerates Digital Transformation",
+    mainTitle: "AI-Powered Intelligence for a Competitive Edge",
     mainSubTitle:
-      "Empower your enterprise with scalable, secure, and high-performance mobile solutions designed to drive digital transformation across modern businesses.",
-    title: "Build Smart. Launch Fast.",
+      "Harness the power of advanced analytics, machine learning, and AI-driven insights to optimize decision-making, innovate faster, and create measurable business value.",
+    title: "Think Smart. Act Faster.",
     subtitle:
-      "With us, turn your mobile vision into reality — across iOS and Android.",
+      "With us, transform your data into intelligent insights and AI-powered solutions that deliver impact from day one.",
     categories: [
       {
         icon: "aiDataScience/predAnlsys",
@@ -49,12 +49,12 @@ const servicesData = [
   },
   {
     id: "web",
-    mainTitle: "Innovative Services to Power Your Growth",
+    mainTitle: "Advanced Energy Analytics to Power Your Future",
     mainSubTitle:
-      "Unlock new possibilities with us — through cutting-edge technology, expert guidance, and solutions tailored to your business goals.",
-    title: "Full-stack Power. Full Impact.",
+      "Unlock operational efficiency and sustainability with data-driven insights, predictive models, and intelligent energy management solutions.",
+    title: "Full-Spectrum Energy Intelligence. Maximum Impact.",
     subtitle:
-      "Build modern, high-performing web and mobile apps with complete tech coverage.",
+      "From real-time monitoring to advanced forecasting, harness the complete analytics stack to optimize performance and drive measurable results.",
     categories: [
       {
         icon: "adwanceEnergyAnalytics/realTime",
@@ -97,12 +97,12 @@ const servicesData = [
   },
   {
     id: "digital",
-    mainTitle: "Reimagine Your Business for the Digital Age",
+    mainTitle: "Reimagine Conversations for the Digital Age",
     mainSubTitle:
-      "At TOD, Modernize your operations and elevate customer experiences with agile, data-driven solutions — built for Vision 2030",
-    title: "Build Smart. Transform Fast.",
+      "At Surkh, transform customer interactions with intelligent chatbots and smart interfaces that deliver instant, personalized, and engaging experiences.",
+    title: "Build Smart. Connect Faster.",
     subtitle:
-      "Achieve more with digital solutions built to streamline operations, cut friction, and drive measurable business outcomes.",
+      "Achieve more with AI-powered communication tools designed to streamline support, reduce response times, and drive customer satisfaction.",
     categories: [
       {
         icon: "chatbotsAndSmartInterFaces/chatWithYourData",
@@ -137,12 +137,12 @@ const servicesData = [
   },
   {
     id: "odoo",
-    mainTitle: "Flexible Odoo Solutions Tailored for Business Needs",
+    mainTitle: "Full-Stack Solutions Tailored to Your Vision",
     mainSubTitle:
-      "Unlock operational efficiency, automate workflows, and stay fully compliant with local regulations all on Odoo.",
-    title: "Odoo, Reimagined for Your Business",
+      "Turn ideas into market-ready products with end-to-end development across front-end, back-end, and cloud — all aligned with your business goals.",
+    title: "Product Development, Reimagined for Impact",
     subtitle:
-      "With us, build, modify, and scale Odoo apps to match your evolving goals.",
+      "With us, design, build, and scale high-performing digital products that adapt to your evolving market needs.",
     categories: [
       {
         icon: "fullStackProductDevelopment/customWebMobileApp",

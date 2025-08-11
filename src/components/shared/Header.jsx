@@ -24,8 +24,8 @@ const Header = () => {
       { name: "About Us", href: "/about-us" },
       { name: "Portfolio", href: "/portfolio" },
       {
-        name: "Services",
-        href: "/our-services",
+        name: "Solutions",
+        href: "/our-solutions",
         isSubLinks: true,
         subLinks: [
           { name: "Mobile App Development", href: "/our-services#mobile-app" },

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
@@ -29,6 +29,39 @@ const initialValues = {
 
 const ConsultOurExperts = () => {
   const { t } = useTranslation();
+  const [countryCodes, setCountryCodes] = useState([]);
+
+  // Fetch country codes on component mount
+  useEffect(() => {
+    const fetchCountryCodes = async () => {
+      try {
+        const res = await fetch("https://restcountries.com/v3.1/all?fields=name,idd");
+        const data = await res.json();
+
+        const codes = data
+          .map((country) => {
+            const root = country.idd?.root || "";
+            const suffixes = country.idd?.suffixes || [];
+
+            if (root && suffixes.length > 0) {
+              return suffixes.map((suffix) => ({
+                code: `${root}${suffix}`,
+                name: country.name.common,
+              }));
+            }
+            return [];
+          })
+          .flat()
+          .sort((a, b) => a.name.localeCompare(b.name)); // Sort by country name
+
+        setCountryCodes(codes);
+      } catch (error) {
+        console.error("Failed to fetch country codes", error);
+      }
+    };
+
+    fetchCountryCodes();
+  }, []);
 
   const API_URL = process.env.NEXT_PUBLIC_CONTACT_API_URL;
   const AUTH_TOKEN = process.env.NEXT_PUBLIC_CONTACT_API_TOKEN;
@@ -142,9 +175,11 @@ const ConsultOurExperts = () => {
                           className="input mw-80 ltr"
                           placeholder={t("Select County code")}
                         >
-                          <option value="+966">+966</option>
-                          <option value="+91">+91</option>
-                          <option value="+1">+1</option>
+                          {countryCodes.map((country, index) => (
+                            <option key={index} value={country.code}>
+                              ({country.code})
+                            </option>
+                          ))}
                         </Field>
                         <Field
                           name="mobile"

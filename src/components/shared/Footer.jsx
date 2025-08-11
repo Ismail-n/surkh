@@ -34,7 +34,7 @@ const Footer = () => {
                 priority
               />
             </Link>
-            <h6>{t("© 2025 Tod All Rights Reserved.")}</h6>
+            <h6>{t("© 2025 Surkh All Rights Reserved.")}</h6>
           </div>
           <div className="single_item reach_section">
             <h2>{t("Address")}</h2>
