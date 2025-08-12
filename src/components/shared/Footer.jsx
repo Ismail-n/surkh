@@ -63,7 +63,7 @@ const Footer = () => {
                   height={24}
                   alt="call"
                 />
-                <a href="tel:+966554848908">+966 55 484 8908</a>
+                <a href="tel:+97185522284">+971 85522284</a>
               </div>
               <div className="single_add">
                 <Image
@@ -72,8 +72,8 @@ const Footer = () => {
                   height={24}
                   alt="email"
                 />
-                <a href="mailto:business@tod.com.sa">
-                  {t("hello@surkh.be")}
+                <a href="mailto:support@surkh.ae">
+                  {t("support@surkh.ae")}
                 </a>
               </div>
             </div>
@@ -185,7 +185,7 @@ const Footer = () => {
                   height={24}
                   alt="call"
                 />
-                <a href="tel:+966554848908" className="ltr">+966 55 484 8908</a>
+                <a href="tel:+97185522284" className="ltr">+971 85522284</a>
               </div>
               <div className="single_add">
                 <Image
@@ -194,8 +194,8 @@ const Footer = () => {
                   height={24}
                   alt="email"
                 />
-                <a href="mailto:business@tod.com.sa">
-                  {t("business@tod.com.sa")}
+                <a href="mailto:support@surkh.ae">
+                  {t("support@surkh.ae")}
                 </a>
               </div>
             </div>
