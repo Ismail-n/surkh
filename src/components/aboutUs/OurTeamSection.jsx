@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row } from "react-bootstrap";
 import Title from "../common/Title";
 import SubTitle from "../common/SubTitle";
@@ -54,16 +54,23 @@ function OurTeamSection() {
 
 export default OurTeamSection
 
-const MindsBehindSurkhCard = ({ item ,teamType }) => {
-  console.log(item);
-
-  const { image, name, roles, location, email, description } = item || {};
-
+const MindsBehindSurkhCard = ({ item, teamType }) => {
+  const { id, image, name, roles, location, email, description, additional } = item || {};
   const { t } = useTranslation();
+  
+
+  const [showAdditional, setShowAdditional] = useState(false);
+  const [minHeight, setMinHeight] = useState(0);
+  const storyRef = useRef(null);
+
+  // Measure max height for same teamType
+  
+
   return (
     <Col lg={6} xs={12}>
-      <div className="mind_behind_surkh_single" teamType={teamType}>
+      <div className="mind_behind_surkh_single" teamtype={teamType}>
         <div className="person_details">
+          {/* Top Section */}
           <div className="top">
             <Image
               src={`/images/aboutUs/mindsBehindSurkh/${image}.webp`}
@@ -81,12 +88,7 @@ const MindsBehindSurkhCard = ({ item ,teamType }) => {
                   height={24}
                   alt="location"
                 />
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=""
-                >
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   {t(location)}
                 </a>
               </div>
@@ -97,30 +99,58 @@ const MindsBehindSurkhCard = ({ item ,teamType }) => {
                   height={24}
                   alt="email"
                 />
-                <a href="mailto:business@tod.com.sa">
+                <a href={`mailto:${email}`}>
                   {t(email)}
                 </a>
               </div>
             </div>
           </div>
+
           <div className="vertical_saperator"></div>
-          <div className="story">
-            <h2>"{t(description)}"</h2>
+
+          {/* Story Section with min height */}
+          <div className="story" ref={storyRef} style={{ minHeight }}>
+            <h2>“{t(description)}”</h2>
           </div>
+
+          {/* Collapsible Section */}
+          {showAdditional && (
+            <div className="collapsible_additional_information_wrapper open">
+              {additional?.map((additionalData, index) => (
+                <div key={index}>
+                  <p className={additionalData?.isBold ? "bold" : "normal"}>
+                    {additionalData?.para}
+                  </p>
+                  <ul>
+                    {additionalData?.points?.map((point, pointIndex) => (
+                      <li key={pointIndex}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-        <div className="read_more_wrapper">
-          <a href='#'>
-            {t('Read more')}
-          </a>
+
+        {/* Toggle Button */}
+        <div
+          className={`read_more_wrapper ${showAdditional ? "expanded" : ""}`}
+          onClick={() => setShowAdditional((prev) => !prev)}
+          style={{ cursor: "pointer" }}
+        >
+          <button type="button" className="read_more_button">
+            {showAdditional ? t("Read less") : t("Read more")}
+          </button>
           <Image
             src="/images/icons/surkhLanguageSwitcherArrowRed.svg"
             width={24}
             alt="language switcher arrow"
             height={24}
+            className="arrow_icon"
           />
-
         </div>
       </div>
     </Col>
   );
 };
+
